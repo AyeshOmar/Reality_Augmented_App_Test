@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Reality_Augmented_App_Test/static/css/main.df7c9809.css",
+    "main.js": "/Reality_Augmented_App_Test/static/js/main.f5cdadc3.js",
+    "static/js/453.2fd2afa5.chunk.js": "/Reality_Augmented_App_Test/static/js/453.2fd2afa5.chunk.js",
+    "index.html": "/Reality_Augmented_App_Test/index.html",
+    "main.df7c9809.css.map": "/Reality_Augmented_App_Test/static/css/main.df7c9809.css.map",
+    "main.f5cdadc3.js.map": "/Reality_Augmented_App_Test/static/js/main.f5cdadc3.js.map",
+    "453.2fd2afa5.chunk.js.map": "/Reality_Augmented_App_Test/static/js/453.2fd2afa5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.df7c9809.css",
+    "static/js/main.f5cdadc3.js"
+  ]
+}
