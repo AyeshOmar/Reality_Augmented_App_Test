@@ -1,7 +1,12 @@
+
+
 import { OrbitControls } from "@react-three/drei";
 import { useThree, extend } from "@react-three/fiber";
 import { Interactive, useHitTest, useXR } from "@react-three/xr";
-import { useRef, useState ,useEffect } from "react";
+import { useRef, useState } from "react";
+
+
+
 import Model from "./Model";
 
 extend({ OrbitControls });
@@ -24,7 +29,11 @@ console.log(reticleRef);
   const { camera, gl } = useThree();
 
 
-
+  useThree(({ camera }) => {
+    if (!isPresenting) {
+      camera.position.z = 3;
+    }
+  });
 
   // lfonction hedhi lkol teb3a lmesh , detect le surface (position , detect )
 

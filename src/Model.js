@@ -7,7 +7,7 @@ export default function Model({props}) {
     const [loading, setLoading] = useState(true);
     const [model, setModel] = useState(null);
 
-    const modelPath = `${process.env.PUBLIC_URL}/sofa.glb`;
+    const modelPath = `${process.env.PUBLIC_URL}/model.gltf`;
 
 
 console.log(modelPath);
@@ -51,7 +51,7 @@ console.log(modelPath);
 
     // Render the model only when it's not null
     return model ? (
-        <group scale={[0.7,0.7,0.7]} dispose={null}>
+        <group scale={[3,3,3]} dispose={null}>
             <primitive object={model} />
         </group>
     ) : null;
