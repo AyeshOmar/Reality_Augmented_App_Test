@@ -1,13 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, {Suspense, useState, useEffect } from 'react';
 import { Text } from "@react-three/drei";
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 
-export default function Model({props}) {
+export default function Model({position}) {
    
     const [loading, setLoading] = useState(true);
     const [model, setModel] = useState(null);
 
-    const modelPath = `${process.env.PUBLIC_URL}/modern_chair.glb`;
+    const modelPath = `${process.env.PUBLIC_URL}/azouz.gltf`;
+
 
 
 console.log(modelPath);
@@ -20,6 +21,7 @@ console.log(modelPath);
                 (gltf) => {
                     setModel(gltf.scene);
                     setLoading(false);
+                    console.log(gltf);
                 },
                 undefined,
                 (error) => {
@@ -51,8 +53,9 @@ console.log(modelPath);
 
     // Render the model only when it's not null
     return model ? (
-        <group scale={[3,3,3]} dispose={null}>
-            <primitive object={model} />
-        </group>
+        <Suspense fallback={null}>
+            <primitive position={position} object={model} />
+        </Suspense>
+
     ) : null;
 }
