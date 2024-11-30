@@ -7,7 +7,7 @@ export default function Model({props}) {
     const [loading, setLoading] = useState(true);
     const [model, setModel] = useState(null);
 
-    const modelPath = `${process.env.PUBLIC_URL}/model.gltf`;
+    const modelPath = `${process.env.PUBLIC_URL}/modern_chair.glb`;
 
 
 console.log(modelPath);

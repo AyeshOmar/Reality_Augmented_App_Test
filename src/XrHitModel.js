@@ -4,9 +4,6 @@ import { OrbitControls } from "@react-three/drei";
 import { useThree, extend } from "@react-three/fiber";
 import { Interactive, useHitTest, useXR } from "@react-three/xr";
 import { useRef, useState } from "react";
-
-
-
 import Model from "./Model";
 
 extend({ OrbitControls });
@@ -40,7 +37,6 @@ console.log(reticleRef);
   // (hitMatrix => contient le (position , rotation , scale))
   // (hit => cet un boolean return surface detect succufuly )
   useHitTest((hitMatrix, hit) => {
-
     //check "mesh" exist and session open 
     if (reticleRef.current && hit) {
 
@@ -61,8 +57,8 @@ console.log(reticleRef);
 
   
 
-  // Function to place the model on user interaction
-  const placeModel = (e) => {
+// Function to place the model on user interaction
+const placeModel = (e) => {
 console.log(e);
     //check if surface detected ** check if the cordonner detected also
     if (e.intersection && e.intersection.point) {
